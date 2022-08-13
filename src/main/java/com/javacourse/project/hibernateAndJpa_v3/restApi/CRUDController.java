@@ -25,6 +25,15 @@ public class CRUDController {
         return crudService.getCRUD(documentId);
     }
 
+    @PutMapping("/update")
+    public String updateCRUD(@RequestBody CRUD crud) throws ExecutionException, InterruptedException {
+        return crudService.updateCRUD(crud);
+    }
+
+    @PutMapping("/delete")
+    public String deleteCRUD(@RequestParam String documentId){
+        return crudService.deleteCRUD(documentId);
+    }
     @GetMapping("/test")
     public ResponseEntity<String> testGetEndpoint() { return ResponseEntity.ok("hibernateAndJpa_v3 Test Get Endpoint is Working");}
 }
