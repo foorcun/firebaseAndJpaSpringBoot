@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.concurrent.ExecutionException;
 
+@CrossOrigin
 @RestController
 public class CRUDController {
     public CRUDService crudService;
@@ -31,7 +32,7 @@ public class CRUDController {
     }
 
     @PutMapping("/delete")
-    public String deleteCRUD(@RequestParam String documentId){
+        public String deleteCRUD(@RequestParam String documentId){
         return crudService.deleteCRUD(documentId);
     }
     @GetMapping("/test")
