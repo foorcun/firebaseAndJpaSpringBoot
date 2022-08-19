@@ -26,9 +26,27 @@ class DataApiPage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () async {
+              DataApi.getResponse2();
+            },
+            child: Text("Read user_2"),
+          ),
+          ElevatedButton(
+            onPressed: () async {
               DataApi.createUser();
             },
-            child: Text("create user_2"),
+            child: Text("create user_2 - POST"),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              DataApi.putUser2();
+            },
+            child: Text("put"),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              DataApi.deleteUser2();
+            },
+            child: Text("delete"),
           ),
         ],
       ),
